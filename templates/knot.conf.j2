@@ -40,5 +40,8 @@ zone:
 {% if 'file' in zone %}
     file: {{ zone.file }}
 {% endif %}
+{% if 'acl' in zone %}
+    acl: [ {{ zone.acl|join(', ') }} ]
+{% endif %}
 {% endfor %}
 
