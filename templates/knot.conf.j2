@@ -43,5 +43,8 @@ zone:
 {% if 'acl' in zone %}
     acl: [ {{ zone.acl|join(', ') }} ]
 {% endif %}
+{% if 'notify' in zone %}
+    notify: [ {{ zone.notify|join(', ') }} ]
+{% endif %}
 {% endfor %}
 
