@@ -46,5 +46,6 @@ zone:
 {% if 'notify' in zone %}
     notify: [ {{ zone.notify|join(', ') }} ]
 {% endif %}
+    zonefile-load: difference
 {% endfor %}
 
